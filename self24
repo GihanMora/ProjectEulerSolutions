@@ -1,0 +1,68 @@
+a=['0','1','2','3','4','5','6','7','8','9']
+
+d=''
+k=0
+for i in a:
+    d=d+i
+    for z in a:
+        if z in d:
+            continue
+        else:
+            d=d+z
+        for p in a:
+            if p in d:
+                continue
+            else:
+                d=d+p
+            for t in a:
+                if t in d:
+                    continue
+                else:
+                    d=d+t
+                for m in a:
+                    if m in d:
+                        continue
+                    else:
+                        d=d+m
+                    for c in a:
+                        if c in d:
+                            continue
+                        else:
+                            d=d+c
+                        for y in a:
+                            if y in d:
+                                continue
+                            else:
+                                d=d+y
+                            for q in a:
+                                if q in d:
+                                    continue
+                                else:
+                                    d=d+q
+                                for h in a:
+                                    if h in d:
+                                        continue
+                                    else:
+                                        d=d+h
+                                    for x in a:
+                                        if x in d:
+                                            continue
+                                        else:
+                                            d=d+x
+                                            k=k+1
+                                            ##if k==1000000:
+                                                ##print  d
+                                            print d
+                                            #d=i+z+p+t+m+c+y+q+h
+                                    d=i+z+p+t+m+c+y+q
+        
+                                d=i+z+p+t+m+c+y
+                            d=i+z+p+t+m+c
+                        d=i+z+p+t+m
+                    d=i+z+p+t
+                d=i+z+p
+            d=i+z   
+        d=i
+    d=''    
+            
+            

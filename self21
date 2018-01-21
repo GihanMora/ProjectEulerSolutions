@@ -1,0 +1,16 @@
+h=0
+for i in range(1,10001):
+    s=0
+    b=0
+    for k in range(1,i):
+        if i%k==0:
+            s=s+k
+    for m in range(1,s):
+        if s%m==0:
+            b=b+m
+    if b==i and i!=s:
+        h=h+b
+print h
+
+
+        

@@ -1,0 +1,61 @@
+import time
+a=time.time()
+'''
+def t(x):
+    for a in xrange(2,x):
+        if x%a==0:
+            return False
+    else:
+        return True
+
+for i in xrange(1,10001):
+    if t(i):
+        print i
+
+
+y=2
+i=3
+while i<2000000:
+    if t(i):
+        y=y+i
+    i=i+1
+print y
+
+
+
+
+def prime(n):
+    d=[]
+    np=[]
+    for i in range(2,n+1):
+        if i not in np:
+            d.append(i)
+            for j in range(i*i,n+1,i):
+                np.append(j)
+    return d
+
+print sum(prime(2000000))
+'''
+
+def pr(x):
+    num=set(range(x,1,-1))
+    primes=[]
+    while num:
+        p=num.pop()
+        primes.append(p)
+        num.difference_update(set(range(p*2,x+1,p)))
+    return primes
+print sum(pr(2000000))
+        
+    
+
+print time.time()-a,'s'
+
+
+
+
+
+
+
+
+

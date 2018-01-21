@@ -1,0 +1,18 @@
+j=[]
+
+for i in range(1,1000):
+    j.append(i*i)
+
+n=[]
+for d in j[::-1]:
+    for g in j:
+        if (d-g) in j:
+            if d**0.5+g**0.5+(d-g)**0.5 <1000:
+                n.append(d**0.5+g**0.5+(d-g)**0.5)
+n.sort()
+v=[]
+for x in n:
+    v.append(n.count(x))
+print v
+print n(v.index(max(v)))
+    

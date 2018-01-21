@@ -1,0 +1,11 @@
+def bint(x):
+    return int(bin(x)[2:])
+l=0
+for i in range(1,1000000):
+    if str(i)==str(i)[::-1]:
+        s= bint(i)
+        
+        if str(s)==str(s)[::-1]:
+            l=l+i
+print l
+        

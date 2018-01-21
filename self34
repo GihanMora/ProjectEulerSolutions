@@ -1,0 +1,27 @@
+def f(x):
+    if x==1:
+        return 1
+    n=1
+    for i in range(1,x+1):
+        n=n*i
+    return n
+c=[]
+v=[]
+k=-1
+for i in range(3,100000):
+    s=0
+    k=k+1
+    c.append(i)
+    while i>=1:
+        
+        b=i%10
+        s=s+f(b)
+        i=i/10
+        
+    v.append(s)
+    if  c[k]==v[k]:
+        print c[k]
+     
+
+                   
+    

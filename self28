@@ -1,0 +1,32 @@
+sum=1
+i,c,j=1,1,6
+while c<501:
+    i+=j
+    sum+=i
+    j+=8
+    c+=1
+
+a,b,d=1,1,8
+while b<501:
+    a+=d
+    sum+=a
+    d+=8
+    b+=1
+
+z,x,v=1,1,2
+while x<501:
+    z+=v
+    sum+=z
+    v+=8
+    x+=1
+
+o,k,l=1,1,4
+while k<501:
+    o+=l
+    sum+=o
+    l+=8
+    k+=1
+
+print sum    
+    
+    

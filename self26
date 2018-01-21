@@ -1,0 +1,21 @@
+from decimal import *
+
+def fraction(i):
+    getcontext().prec=1000
+    a=Decimal(1)/Decimal(i)
+    return a
+
+print fraction(13)
+'''
+for j in b:
+    for k in range(len(j)):
+        for d in range(len(j)):
+            if j[k:d] in j[d:]:
+                if len(j[k:d])>4:
+                    print j[k:d],1.0/float('0.'+j)
+                    break
+
+'''
+    
+
+    

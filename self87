@@ -1,0 +1,27 @@
+def p(x):
+    c=0
+    for i in range(2,x):
+        if x%i==0:
+            return False
+    else:
+        return True
+
+
+
+k=[]
+for j in range(2,7000):
+    if p(j):k.append(j)
+
+s=0
+for i in k:
+    for t in k:
+        for n in k:
+            if (i**4)+(t**3)+(n**2)<50000000:
+                s+=1
+print s
+                        
+
+                    
+           
+    
+        

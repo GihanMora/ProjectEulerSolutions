@@ -1,0 +1,48 @@
+
+import time
+q=time.time()
+'''
+def pr(x):
+    num=set(range(x,1,-1))
+    primes=[]
+    while num:
+        p=num.pop()
+        primes.append(p)
+        num.difference_update(set(range(p*2,x+1,p)))
+    return primes
+
+'''
+def t(x):
+    for a in xrange(2,x):
+        if x%a==0:
+            return False
+    else:
+        return True
+
+
+
+def ro(x):
+    p=[]
+    x=str(x)
+    for i in range(0,len(str(x))):
+        x=x[-1:]+x[:-1]
+        p.append(int(x))
+    return p
+
+
+v=0
+for a in range(500001,1000000,2):
+    if t(a):
+        if ('2' not in list(str(a))) and ('4' not in list(str(a))) and ('6' not in list(str(a))) and ('8' not  in list(str(a))):
+            n=0
+            for w in  ro(a):
+                if t(w):
+                    n=n+1
+                else:
+                    break
+            if n==len(ro(a)):
+                v=v+1
+print v
+print time.time()-q
+
+            

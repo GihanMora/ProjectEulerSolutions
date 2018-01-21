@@ -1,0 +1,8 @@
+sum=0
+square_sum=0
+for a in range(1,101):
+    sum+=a
+    square_sum+=(a**2)
+
+print (sum**2)-square_sum
+    

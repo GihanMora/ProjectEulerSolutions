@@ -1,0 +1,17 @@
+q=[]
+e=[]
+r=[]
+
+for i in range(1,100000):
+    s=i*(i+1)/2
+    q.append(s)
+for v in range(1,100000):
+    c=v*((3*v)-1)/2
+    e.append(c)
+for x in range(1,100000):
+    z=x*((2*x)-1)
+    r.append(z)
+for i in q:
+    if (i in e) and (i in r):
+        print i
+    

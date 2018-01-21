@@ -1,0 +1,17 @@
+'''
+fo=open("p067_triangle.txt","r")
+
+j=[]
+for i in fo.readlines():
+    j.append(i[:len(i)-1])
+
+print j
+'''
+p=open("p067_triangle.txt","r")
+raws=[]
+for k in p:
+    raws.append([int(i) for i in k.split(" ")])
+for i,j in [(i,j) for i in range(len(raws)-2,-1,-1) for j in range(len(raws[i]))]:
+    raws[i][j]+=max(raws[i+1][j],raws[i+1][j+1])
+print raws[0][0]
+

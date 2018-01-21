@@ -1,0 +1,48 @@
+def prime(x):
+    for j in range(2,x):
+        if x%j==0:
+            return False
+    else:
+        return True
+def diag(side_length):
+    num_of_eli=1
+    num_of_primes=0
+    i,c,j=1,1,6
+    a,b,d=1,1,8
+    z,x,v=1,1,2
+    o,k,l=1,1,4
+    while 20000<k+x+c+b<((side_length*2)-1):
+        #print z
+        z+=v
+        if prime(z):
+            num_of_primes+=1
+        num_of_eli+=1
+        v+=8
+        x+=1
+        #print o
+        o+=l
+        if prime(o):
+            num_of_primes+=1
+        num_of_eli+=1
+        l+=8
+        k+=1
+        #print i
+        i+=j
+        if prime(i):
+            num_of_primes+=1
+        num_of_eli+=1
+        j+=8
+        c+=1
+        #print a
+        a+=d
+        if prime(a):
+            num_of_primes+=1
+        num_of_eli+=1
+        d+=8
+        b+=1
+        
+        if  ((float(num_of_primes)/float(num_of_eli))*100)<10:
+            print (float(num_of_primes)/float(num_of_eli))*100
+
+print diag(27000)
+        

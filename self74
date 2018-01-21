@@ -1,0 +1,26 @@
+u=0
+def f(x):
+    if x==1:
+        return 1
+    n=1
+    for i in range(1,x+1):
+        n=n*i
+    return n
+def fds(y):
+    sum=0
+    for i in (list(str(y))):
+        sum=sum+ f(int(i))
+    return sum
+for d in range(1,1000000): 
+    p=[]
+    
+    l=0
+    while True:
+        l=l+1
+        p.append(d)
+        d=fds(d)
+        if d in p:
+            break
+    if l==60:
+        u=u+1
+print u

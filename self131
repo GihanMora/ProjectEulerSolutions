@@ -1,0 +1,9 @@
+import math
+def cube(x):
+    if math.log(x,3)==round(math.log(x,3)):
+        return True
+def a(y,c):
+    b=((y**3) +((y**2)*c))
+    if cube(b):
+        return True
+print a(8,19)

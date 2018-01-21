@@ -1,0 +1,27 @@
+def p(x):
+    for i in range(2,x):
+        if x%i==0:
+            return False
+    else:
+        return True
+def check(a,lst):
+    c=0
+    for i in lst:
+        if p(int(str(i)+str(a))) and p(int(str(a)+str(i))):
+            c+=1
+    if c==len(lst):
+        return True
+
+primes= [int(i) for i in range(3,10000) if p(i)]
+for a in primes:
+    for b in primes:
+        if check(b,(a,)):
+            for c in primes:
+                if check(c,(a,b)):
+                    for d in primes:
+                        if check(d,(a,b,c)):
+                            for e in primes:
+                                if check(e,(a,b,c,d)) and a<b<c<d<e:
+                                    print a,b,c,d,e
+                            
+   

@@ -1,0 +1,11 @@
+e=[]
+for i in range(1,4000):
+    v=i*((3*i)-1)/2
+    e.append(v)
+
+for s in e:
+    for b in e:
+        if (s-b) in e and (s+b) in e:
+            print (s-b)
+
+

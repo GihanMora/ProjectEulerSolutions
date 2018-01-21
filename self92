@@ -1,0 +1,27 @@
+def f(x):
+    s=0
+    a=list(str(x))
+    for i in a:
+        s=s+ int(i)**2
+    return s
+
+def t(y):
+    n=[]
+    while True:
+        n.append(y)
+        y=f(y)
+        if  y==89 or y==1:
+            n.append(y)
+            if y==89:
+                return True
+            
+            break
+    
+c=0   
+for i in range(1,10000000):
+    if t(i):
+        c=c+1
+print c
+        
+
+    

@@ -1,0 +1,16 @@
+import fractions
+def rp(x):
+    c=0
+    for i in range(1,x):
+        if fractions.gcd(i,x)==1:
+            c+=1
+    return c
+a=1
+min=100
+while True:
+    if sorted(str(a))==sorted(str(rp(a))):
+        #if min>a/rp(a):
+            #min=a/rp(a)
+        print a/rp(a) 
+    a+=1
+print min

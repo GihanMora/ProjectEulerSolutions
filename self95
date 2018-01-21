@@ -1,0 +1,23 @@
+def amc(x):
+    s=0
+    for k in range(1,x):
+        if x%k==0:
+            s=s+k
+    return s
+for c in range(1,100):
+    k=c
+    t=[]
+    while True:
+        t.append(c)
+        c=amc(c)
+        if c==k:
+            t.append(c)
+            print t
+            break
+    
+    
+    
+
+        
+    
+    

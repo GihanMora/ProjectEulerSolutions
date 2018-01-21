@@ -1,0 +1,120 @@
+'''
+t,s,p,h,hp,o=[],[],[],[],[],[]
+a=1
+while a<200:
+    tt=(a*(a+1))/2
+    if 1000<tt<10000:
+        t.append(tt)
+    ss=a*a
+    if 1000<ss<10000:
+        s.append(a*a)
+    pp=a*((3*a)-1)
+    if 1000<pp<10000:
+        p.append(a*((3*a)-1))
+    hh=a*((2*a)-1)
+    if 1000<hh<10000:
+        h.append(a*((2*a)-1))
+    hpp=a*((5*a)-3)/2
+    if 1000<hpp<10000:
+        hp.append(a*((5*a)-3)/2)
+    oo=a*((a*3)-2)
+    if 1000<oo<10000:
+        o.append(a*((a*3)-2))
+    
+    a+=1
+all=t+s+p+h+hp+o
+all.sort()
+def poli(x):
+    if x in t:return set(t)
+    if x in s:return set(s)
+    if x in p:return set(p)
+    if x in h:return set(h)
+    if x in hp:return set(hp)
+    if x in o:return set(o)
+    
+def pol(x):
+    if x in t:return 'tri'
+    if x in s:return 'sqa'
+    if x in p:return 'pent'
+    if x in h:return 'hex'
+    if x in hp:return 'hep'
+    if x in o:return 'oct'  
+
+for a in all:
+    for b in all:
+        if str(a)[2:4]==str(b)[0:2] and (b!=a):
+            for c in all:
+                if str(b)[2:4]==str(c)[0:2] and (b!=c) and (c!=a):
+                    for d in all:
+                        if str(c)[2:4]==str(d)[0:2] and (c!=d) and (d!=b) and (d!=a):
+                            for e in  all:
+                                if str(d)[2:4]==str(e)[0:2] and (d!=e) and (e!=c) and (e!=b) and (e!=a):
+                                    for f in all:
+                                        if (str(e)[2:4]==str(f)[0:2]) and (e!=f) and (f!=d) and (f!=c) and (f!=b) and (e!=a) :
+                                            if a+b+c+d+e+f==28684:
+                                                print a+b+c+d+e+f
+                                                                      
+'''    
+def tri(x):
+    root=float(-1+(1+(8*x))**.5)/float(2)
+    if root==round(root):
+        return True
+    else:
+        return False
+def sq(x):
+    if (x**.5)==round(x**.5):
+        return True
+    else:
+        return False
+def pent(x):
+    root=float(1+(1+(24*x))**.5)/float(6)
+    if root==round(root):
+        return True
+    else:
+        return False
+def hex(x):
+    root=float(1+(1+(8*x))**.5)/float(4)
+    if root==round(root):
+        return True
+    else:
+        return False
+def hep(x):
+    root=float(3+(9+(40*x))**.5)/float(10)
+    if root==round(root):
+        return True
+    else:
+        return False
+def oct(x):
+    root=float(2+(4+(12*x))**.5)/float(6)
+    if root==round(root):
+        return True
+    else:
+        return False
+num=[x for x in range(1000,10000) if tri(x) or sq(x) or pent(x) or hex(x) or hep(x) or oct(x)]
+
+def poli(y):
+    if oct(y):return 'oct'
+    if hep(y):return 'hep'
+    if hex(y):return 'hex'
+    if pent(y):return 'pent'
+    if sq(y):return 'sq'
+    if tri(y):return 'tri'
+for a in num:
+    for b in num:
+        if str(a)[2:4]==str(b)[0:2]:
+            for c in num:
+                if str(b)[2:4]==str(c)[0:2]:
+                    for d in num:
+                        if str(c)[2:4]==str(d)[0:2]:
+                            for e in num:
+                                if str(d)[2:4]==str(e)[0:2]:
+                                    for f in num:
+                                        if str(e)[2:4]==str(f)[0:2] and str(f)[2:4]==str(a)[0:2]:
+                                            asd=[poli(a),poli(b),poli(c),poli(d),poli(e),poli(f)]
+                                            if len(set(asd))==6:
+                                                 print a,b,c,d,e,f
+                                                 print poli(a),poli(b),poli(c),poli(d),poli(e),poli(f)
+                                                 print a+b+c+d+e+f
+                                                 
+  
+    

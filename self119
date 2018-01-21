@@ -1,0 +1,21 @@
+'''
+def dps(x):
+    for f in range(2,80):
+        if sum(map(int,str(x**f)))==x:
+            print x**f
+    else:
+        return 0
+y=[]
+for j in range(150):
+    if dps(j):
+        y.append(dps(j))
+y=sorted(y)
+print y'''
+
+m=[]
+for ds in range(2,80):
+    for ex in range(2,15):
+        if sum(map(int,str(ds**ex)))==ds:
+            m.append(ds**ex)
+m=sorted(m)
+print m

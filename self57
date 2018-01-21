@@ -1,0 +1,10 @@
+counter,m,numerator,denominator=1,0,3,2
+while counter<1001:
+    if len(str(numerator))>len(str(denominator)):
+        m+=1
+    temperory=numerator
+    numerator+=2*denominator
+    denominator+=temperory
+    counter+=1
+print m   
+

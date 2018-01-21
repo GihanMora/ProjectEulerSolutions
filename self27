@@ -1,0 +1,25 @@
+def p(y):
+    for i in range(2,y):
+        if y%i==0:
+            return False
+    else:
+        return True
+k=[]
+for j in range(1000):
+    if p(j):k.append(j)
+    
+
+def q(c,w):
+    s=0
+    for n in range(0,1000):
+        if p(n**2 +(c)*n +w ):
+            s+=1
+    return s
+'''    
+for n in range(0,40):
+    for c in range(-1000,1000):
+        for w in k:
+            if q
+'''    
+print q(1,41) 
+        

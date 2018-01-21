@@ -1,0 +1,11 @@
+w=[]
+c=0
+for a in range(2,101):
+    for b in range(2,101):
+        c=c+1
+        w.append(a**b)
+w.sort()
+w=list(set(w))
+print len(w)
+print c
+        

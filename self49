@@ -1,0 +1,34 @@
+from itertools import permutations
+def p(x):
+    c=0
+    for i in range(1,x+1):
+        if x%i==0:
+            c=c+1
+    if c==2:
+        return True
+def per(x):
+    c=[]
+    for l in permutations(str(x)):
+        c.append(int(''.join(l)))
+    return c
+for a in range(1,3000,2):
+    
+    m=a+3330
+    n=a+6660
+    if (n in per(a)) and (m in per(a)) and p(m) and p(n) and p(a):
+        print a,m,n
+            
+    
+        
+
+    
+        
+    
+    
+    
+    
+            
+    
+        
+    
+    

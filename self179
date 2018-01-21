@@ -1,0 +1,11 @@
+def nd(x):
+    v=0
+    for b in xrange(1,int(x**.5)+1):
+        if x%b==0:
+            v+=2
+    return v
+m=0
+for k in xrange(1,100000):
+    if nd(k)==nd(k+1):
+        m+=1
+print m

@@ -1,0 +1,17 @@
+import time
+a=time.time()
+def oddn(x):
+    for j in str(x):
+        if int(j)%2==0:
+            return False
+    else:
+        return True
+def rvsbl(y):
+    if oddn(y+int(str(y)[::-1])):
+        return True
+c=0
+for h in xrange(1,100000):
+    if rvsbl(h) and h%10!=0 :
+          c+=1
+print c
+print time.time()-a

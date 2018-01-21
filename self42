@@ -1,0 +1,18 @@
+a=open('c:/d.txt','r')
+n=a.readline().replace('\"','').split(',')
+n.sort()
+r=0
+e=[]
+for q in range(1,100):
+    r=r+q
+    e.append(r)
+
+b=[]
+for i in n:
+    c=0
+    for j in range(0,len(i)):
+        c=c+ (ord(i[j])-64)
+    if c in e:
+        b.append(i)
+b.sort()
+print len(b)

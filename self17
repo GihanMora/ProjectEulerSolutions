@@ -1,0 +1,26 @@
+a=('one','two','three','four','five','six','seven','eight','nine',)
+
+
+d,c=0,0
+q,w,e=0,0,0
+for i in ('one','two','three','four','five','six','seven','eight','nine'):
+    q=q+len(i)
+for k in ('Ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'):
+    w=w+len(k)
+for i in ('twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'):
+    e=e+len(i)
+    for j in ('one','two','three','four','five','six','seven','eight','nine'):
+        e=e+len(i+j)
+print 'Hundred'
+print q
+print w
+print e
+
+            
+    
+        
+    
+
+
+
+

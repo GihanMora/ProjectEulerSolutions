@@ -1,0 +1,69 @@
+def p(x):##this function separates the primes
+    c=0
+    for i in range(1,x+1):
+        if x%i==0:
+            c=c+1
+    if c==2:
+        return True
+def rev(n):
+    t=[]
+    while n>0:
+    
+        k=list(str(n))
+        m=''
+        for i in k:
+            m=m+i
+        m= int(m)
+        t.append(m)
+        
+        
+        a=str(n%10)
+        k.remove(a)
+        n=n/10
+        
+    return t
+    
+def fo(x):
+    u=[]
+    g=list(str(x))
+    i=0
+    while True:
+        p=''
+        for j in g[i::]:
+            p=p+j
+        p=int(p)
+        u.append(p)
+        i=i+1
+        if i==len(g):
+            break
+    return u
+    
+r=0   
+for f in range(10,4000):
+    h,y=0,0
+    
+    for i in rev(f):
+        if p(i):
+            y=y+1
+    
+    for i in fo(f):
+        if p(i):
+            h=h+1
+    if y==len(rev(f)) and h==len(fo(f)):
+        r=r+f
+        print f
+print r+739397
+    
+        
+        
+    
+           
+        
+        
+        
+
+     
+        
+
+
+    

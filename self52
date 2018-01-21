@@ -1,0 +1,33 @@
+
+
+
+
+for a in range(100000,142858):
+    
+    q=list(str(a))
+    q.sort()
+    #print q
+    v=a*2
+    m=list(str(v))
+    m.sort()
+    #print m
+    k=a*3
+    e=list(str(k))
+    e.sort()
+    #print e
+    x=a*4
+    r=list(str(x))
+    r.sort()
+    #print r
+    w=a*5
+    t=list(str(w))
+    t.sort()
+    #print t
+    y=a*6
+    u=list(str(y))
+    u.sort()
+    #print u
+    
+
+if q==m==e==r==t==u:
+    print a
